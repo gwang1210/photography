@@ -340,9 +340,9 @@
           if (Math.abs(diffX) > Math.abs(diffY)) {
             // sliding horizontally, check if on thumbnail
             if (currentY <= (window.innerHeight * 0.70 * 0.75)){
-                if (diffX > 60) {
+                if (diffX > 240) {
                   next();
-                } else {
+                } else if (diffX < -240) {
                   prev();
                 }
             }
