@@ -340,10 +340,9 @@
           if (Math.abs(diffX) > Math.abs(diffY)) {
             // sliding horizontally, check if on thumbnail
             if (currentY <= (window.innerHeight * 0.70 * 0.75)){
-                console.log(diffX);
-                if (diffX > 10) {
+                if (diffX > 0) {
                   next();
-                } else if (diffX < -10) {
+                } else {
                   prev();
                 }
             }
