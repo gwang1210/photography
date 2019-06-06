@@ -6,7 +6,7 @@ body{
     overflow-y: hidden;
 }
 #copyright{
-    text-align: right;
+    position: relative;
 }
 img {
     -webkit-user-select: none;
