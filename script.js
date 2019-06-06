@@ -55,7 +55,7 @@
         }
         refreshGallery();
         function refreshGallery(){
-            var current = window.location.href.substring(32);
+            var current = window.location.href.substring(33);
             //var current = window.location.href.substring(73);
             if(current === "" || current == "about" || current == "contact"){
                 click2();
@@ -285,7 +285,7 @@
 //sidebar        
         //sidebar interaction, click on sidebar-img-div 
         function click(){
-            var current = window.location.href.substring(0,30);
+            var current = window.location.href.substring(0,31);
             //var current = window.location.href.substring(72);
             window.location.href = current+"#"+this.getAttribute('data-project');
             var img =document.querySelectorAll('.sidebar-img-div');
@@ -328,7 +328,7 @@
         
         //sidebar interaction    
         function leave(){
-                var current = window.location.href.substring(32);
+                var current = window.location.href.substring(33);
                 //var current = window.location.href.substring(73);
                 if(this.getAttribute('data-project') != current){
                     img = this.children[0];
@@ -351,3 +351,10 @@
             // Announce the new orientation number
             location.reload();
         }, false);
+//no right click on images
+        $('#gallery').on('contextmenu', 'img', function(){ 
+            return false; 
+        });
+        $('#home').on('contextmenu', 'img', function(){ 
+            return false; 
+        });
