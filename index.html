@@ -545,5 +545,9 @@
             // Announce the new orientation number
             location.reload();
         }, false);
+//no right click on images
+        $('#gallery').on('contextmenu', 'img', function(){ 
+            return false; 
+        });
     </script>
 </html>
