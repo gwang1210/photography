@@ -19,43 +19,36 @@
                 // code block
                 img = document.getElementById('inebriate-STL-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             case '2':
                 // code block
                 img = document.getElementById('out-there-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             case '3':
                 // code block
                 img = document.getElementById('a-family-affair-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             case '4':
                 // code block
                 img = document.getElementById('nyc-on-film-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             case '5':
                 // code block
                 img = document.getElementById('modern-orientalism-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             case '6':
                 // code block
                 img = document.getElementById('colorado-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             case '7':
                 // code block
                 img = document.getElementById('botanic-daydream-tn');
                 refreshSidebar(img);
-                //refreshGallery();
                 break;
             default:
         }
@@ -371,5 +364,30 @@
         });
 //fix back/forward nav and hover/active issues
         $(window).bind('hashchange', function() {
+            var current = window.location.href.substring(33);
+            switch(current) {
+                case 'inebriate-STL':
+                    projectTracker = 1;
+                    break;
+                case 'out-there':
+                    projectTracker = 2;
+                    break;
+                case 'a-family-affair':
+                    projectTracker = 3;
+                    break;
+                case 'nyc-on-film':
+                    projectTracker = 4;
+                    break;
+                case 'modern-orientalism':
+                    projectTracker = 5;
+                    break;
+                case 'colorado':
+                    projectTracker = 6;
+                    break;
+                case 'botanic-daydream':
+                    projectTracker = 7;
+                    break;
+                default:
+            }
             window.location.reload(); 
         });
