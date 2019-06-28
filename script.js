@@ -1,6 +1,6 @@
 //on page load
         //image gallery interaction
-        var projectLength = [25,11,6,9,17,12,3];
+        var projectLength = [25,11,6,9,19,12,3];
         var indexTracker = [1,1,1,1,1,1,1];
         var projectTracker = 0;
         //get trackers from local storage
