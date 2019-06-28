@@ -365,7 +365,6 @@
 //fix back/forward nav and hover/active issues
         $(window).bind('hashchange', function() {
             var current = window.location.href.substring(33);
-            click2();
             switch(current) {
                 case 'inebriate-STL':
                     // code block
@@ -410,5 +409,16 @@
                     projectTracker = 7;
                     break;
                 default:
+            }
+            var img =document.querySelectorAll('.sidebar-img-div');
+            for(var i=0;i<img.length;i++){
+                if (i+1 != projectTracker){
+                    child = img[i].children[0];
+                    $(child).animate({
+                        left: "0"
+                    },300);
+                    caption = img[i].children[1];
+                    $(caption).fadeOut('fast');
+                }
             }
         });
