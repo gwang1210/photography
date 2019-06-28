@@ -20,6 +20,13 @@
         </script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     </head>
+<!-- how to add a new body of work -->
+    <!-- edit & resize for sidemar image, gallery images (optimize and compress), and thumbnail immages -->
+    <!-- add div to sidebar for navigation, include sidebar image -->
+    <!-- add gallery div, with one starting image and square images -->
+    <!-- update project tracker and index tracker in JS -->
+    <!-- update switch statement for refreshing sidebar -->
+    <!-- update switch statement in updateImg function -->
     <body>
 <!--navigation-->
         <div id="sidebar">
@@ -28,6 +35,10 @@
                  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
             </h1>
             <div id="nav">
+                <div id="inebriate-STL-tn" data-index = '7' data-project="inebriate-STL" class="sidebar-img-div">
+                    <img class="sidebar-img" src="img/7.jpg">
+                    <p class="img-name"><a href="#inebriate-STL">inebriate stl</a></p>
+                </div>
                 <div id="out-there-tn" data-index = '1' data-project="out-there" class="sidebar-img-div">
                     <img class="sidebar-img" src="img/1.jpg">
                     <p class="img-name"><a href="#out-there">out there</a></p>
@@ -63,7 +74,39 @@
             <p id="copyright">© 2019 Gary Wang</p>
         </div>
 <!--gallery-->
-        <div id="gallery">    
+        <div id="gallery">   
+            <div id="inebriate-STL" class="gallery">
+                <div class="images">
+                    <img id="inebriate-stl-image" src="img/project_inebriateSTL/1.jpg">
+                </div>
+                <div class="thumbnails">
+                    <img src="img/project_inebriateSTL/resized/1.jpg">
+                    <img src="img/project_inebriateSTL/resized/2.jpg">
+                    <img src="img/project_inebriateSTL/resized/3.jpg">
+                    <img src="img/project_inebriateSTL/resized/4.jpg">
+                    <img src="img/project_inebriateSTL/resized/5.jpg">
+                    <img src="img/project_inebriateSTL/resized/6.jpg">
+                    <img src="img/project_inebriateSTL/resized/7.jpg">
+                    <img src="img/project_inebriateSTL/resized/8.jpg">
+                    <img src="img/project_inebriateSTL/resized/9.jpg">
+                    <img src="img/project_inebriateSTL/resized/10.jpg">
+                    <img src="img/project_inebriateSTL/resized/11.jpg">
+                    <img src="img/project_inebriateSTL/resized/12.jpg">
+                    <img src="img/project_inebriateSTL/resized/13.jpg">
+                    <img src="img/project_inebriateSTL/resized/14.jpg">
+                    <img src="img/project_inebriateSTL/resized/15.jpg">
+                    <img src="img/project_inebriateSTL/resized/16.jpg">
+                    <img src="img/project_inebriateSTL/resized/17.jpg">
+                    <img src="img/project_inebriateSTL/resized/18.jpg">
+                    <img src="img/project_inebriateSTL/resized/19.jpg">
+                    <img src="img/project_inebriateSTL/resized/20.jpg">
+                    <img src="img/project_inebriateSTL/resized/21.jpg">
+                    <img src="img/project_inebriateSTL/resized/22.jpg">
+                    <img src="img/project_inebriateSTL/resized/23.jpg">
+                    <img src="img/project_inebriateSTL/resized/24.jpg">
+                    <img src="img/project_inebriateSTL/resized/25.jpg">
+                </div>
+            </div> 
             <div id="out-there" class="gallery">
                 <div class="images">
                     <img id="out-there-image" src="img/project_outThere/1.jpg">
@@ -195,8 +238,8 @@
     <script type="text/javascript">
 //on page load
         //image gallery interaction
-        var projectLength = [11,6,9,17,5,3];
-        var indexTracker = [1,1,1,1,1,1];
+        var projectLength = [11,6,9,17,5,3,25];
+        var indexTracker = [1,1,1,1,1,1,1];
         var projectTracker = 0;
         //get trackers from local storage
         projectTracker = localStorage.getItem("projectTrackerKey");
@@ -210,6 +253,12 @@
             $(caption).fadeIn('slow');
         }
         switch(projectTracker) {
+            case '7':
+                // code block
+                img = document.getElementById('inebriate-STL-tn');
+                refreshSidebar(img);
+                //refreshGallery();
+                break;
             case '1':
                 // code block
                 img = document.getElementById('out-there-tn');
@@ -412,6 +461,11 @@
         //general update img function
         function updateImg(){
              switch(projectTracker) {
+                    case '1':
+                        // code block
+                        img = document.getElementById('inebriate-STL-image');
+                        img.src="img/project_inebriateSTL/"+indexTracker[projectTracker-1]+".jpg";
+                        break;
                     case '1':
                         // code block
                         img = document.getElementById('out-there-image');
