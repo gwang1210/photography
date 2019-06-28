@@ -365,29 +365,50 @@
 //fix back/forward nav and hover/active issues
         $(window).bind('hashchange', function() {
             var current = window.location.href.substring(33);
+            click2();
             switch(current) {
                 case 'inebriate-STL':
+                    // code block
+                    img = document.getElementById('inebriate-STL-tn');
+                    refreshSidebar(img);
                     projectTracker = 1;
                     break;
                 case 'out-there':
+                    // code block
+                    img = document.getElementById('out-there-tn');
+                    refreshSidebar(img);
                     projectTracker = 2;
                     break;
                 case 'a-family-affair':
+                    // code block
+                    img = document.getElementById('a-family-affair-tn');
+                    refreshSidebar(img);
                     projectTracker = 3;
                     break;
                 case 'nyc-on-film':
+                    // code block
+                    img = document.getElementById('nyc-on-film-tn');
+                    refreshSidebar(img);
                     projectTracker = 4;
                     break;
                 case 'modern-orientalism':
+                    // code block
+                    img = document.getElementById('modern-orientalism-tn');
+                    refreshSidebar(img);
                     projectTracker = 5;
                     break;
                 case 'colorado':
+                    // code block
+                    img = document.getElementById('colorado-tn');
+                    refreshSidebar(img);
                     projectTracker = 6;
                     break;
                 case 'botanic-daydream':
+                    // code block
+                    img = document.getElementById('botanic-daydream-tn');
+                    refreshSidebar(img);
                     projectTracker = 7;
                     break;
                 default:
             }
-            window.location.reload(); 
         });
