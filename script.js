@@ -1,7 +1,7 @@
 //on page load
         //image gallery interaction
-        var projectLength = [11,6,9,17,5,3];
-        var indexTracker = [1,1,1,1,1,1];
+        var projectLength = [25,11,6,9,17,12,3];
+        var indexTracker = [1,1,1,1,1,1,1];
         var projectTracker = 0;
         //get trackers from local storage
         projectTracker = localStorage.getItem("projectTrackerKey");
@@ -17,35 +17,41 @@
         switch(projectTracker) {
             case '1':
                 // code block
-                img = document.getElementById('out-there-tn');
+                img = document.getElementById('inebriate-STL-tn');
                 refreshSidebar(img);
                 //refreshGallery();
                 break;
             case '2':
                 // code block
-                img = document.getElementById('a-family-affair-tn');
+                img = document.getElementById('out-there-tn');
                 refreshSidebar(img);
                 //refreshGallery();
                 break;
             case '3':
                 // code block
-                img = document.getElementById('nyc-on-film-tn');
+                img = document.getElementById('a-family-affair-tn');
                 refreshSidebar(img);
                 //refreshGallery();
                 break;
             case '4':
                 // code block
-                img = document.getElementById('modern-orientalism-tn');
+                img = document.getElementById('nyc-on-film-tn');
                 refreshSidebar(img);
                 //refreshGallery();
                 break;
             case '5':
                 // code block
-                img = document.getElementById('colorado-tn');
+                img = document.getElementById('modern-orientalism-tn');
                 refreshSidebar(img);
                 //refreshGallery();
                 break;
             case '6':
+                // code block
+                img = document.getElementById('colorado-tn');
+                refreshSidebar(img);
+                //refreshGallery();
+                break;
+            case '7':
                 // code block
                 img = document.getElementById('botanic-daydream-tn');
                 refreshSidebar(img);
@@ -219,30 +225,35 @@
              switch(projectTracker) {
                     case '1':
                         // code block
+                        img = document.getElementById('inebriate-STL-image');
+                        img.src="img/project_inebriateSTL/"+indexTracker[projectTracker-1]+".jpg";
+                        break;
+                    case '2':
+                        // code block
                         img = document.getElementById('out-there-image');
                         img.src="img/project_outThere/"+indexTracker[projectTracker-1]+".jpg";
                         break;
-                    case '2':
+                    case '3':
                         // code block
                         img = document.getElementById('a-family-affair-image');
                         img.src="img/project_aFamilyAffair/"+indexTracker[projectTracker-1]+".jpg";
                         break;
-                    case '3':
+                    case '4':
                         // code block
                         img = document.getElementById('nyc-on-film-image');
                         img.src="img/project_nycFilm/"+indexTracker[projectTracker-1]+".jpg";
                         break;
-                    case '4':
+                    case '5':
                         // code block
                         img = document.getElementById('modern-orientalism-image');
                         img.src="img/project_modernOrientalism/"+indexTracker[projectTracker-1]+".jpg";
                         break;
-                    case '5':
+                    case '6':
                         // code block
                         img = document.getElementById('colorado-image');
                         img.src="img/project_colorado/"+indexTracker[projectTracker-1]+".jpg";
                         break;
-                    case '6':
+                    case '7':
                         // code block
                         img = document.getElementById('botanic-daydream-image');
                         img.src="img/project_botanicDaydream/"+indexTracker[projectTracker-1]+".jpg";
