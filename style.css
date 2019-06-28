@@ -133,13 +133,6 @@ a:link, a:active, a:hover, a:visited{
     color: #000000;
 }
 
-#nav-images{
-    max-height: 43vh;
-    overflow-y: scroll;
-    z-index: 99;
-    position: relative;
-}
-
 @media handheld,screen and (min-width: 2500px) {
     .img-name{
         display: none;
@@ -174,6 +167,12 @@ a:link, a:active, a:hover, a:visited{
     h2{
         margin-bottom: 13vh;
     }
+    #nav-images{
+        max-height: 43vh;
+        overflow-y: scroll;
+        z-index: 99;
+        position: relative;
+    }
 }
 
 @media handheld,screen and (max-width: 1100px) {
@@ -191,6 +190,12 @@ a:link, a:active, a:hover, a:visited{
     }
     h2{
         margin-bottom: 13vh;
+    }
+    #nav-images{
+        max-height: 43vh;
+        overflow-y: scroll;
+        z-index: 99;
+        position: relative;
     }
 }
 
@@ -215,6 +220,12 @@ a:link, a:active, a:hover, a:visited{
     }
     h2{
         margin-bottom: 8vh;
+    }
+    #nav-images{
+        max-height: 43vh;
+        overflow-y: scroll;
+        z-index: 99;
+        position: relative;
     }
 }
 
