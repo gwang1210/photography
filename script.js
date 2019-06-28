@@ -369,3 +369,9 @@
         $('#home').on('contextmenu', 'img', function(){ 
             return false; 
         });
+//fix back/forward nav and hover/active issues
+        $(window).bind("pageshow", function(event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload(); 
+            }
+        });
