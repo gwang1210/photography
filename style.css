@@ -10,7 +10,7 @@ body{
     font-size: 0.9vw;
     top: 0px;
 }
-html {
+.sidebar-img-div{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 img {
