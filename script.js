@@ -63,7 +63,7 @@
         function refreshGallery(){
             var current = window.location.href.substring(33);
             //var current = window.location.href.substring(73);
-            if(current === "" || current == "about" || current == "contact" || current > 33){
+            if(current === "" || current == "about" || current == "contact" || current.length > 33){
                 click2();
             }
         }
