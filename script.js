@@ -1,4 +1,4 @@
-//on page load
+        //on page load
         //image gallery interaction
         var projectLength = [25,11,6,9,19,12,3];
         var indexTracker = [1,1,1,1,1,1,1];
@@ -367,46 +367,39 @@
             var current = window.location.href.substring(33);
             switch(current) {
                 case 'inebriate-STL':
-                    // code block
                     img = document.getElementById('inebriate-STL-tn');
                     refreshSidebar(img);
-                    projectTracker = 1;
+                    projectTracker = '1';
                     break;
                 case 'out-there':
-                    // code block
                     img = document.getElementById('out-there-tn');
                     refreshSidebar(img);
-                    projectTracker = 2;
+                    projectTracker = '2';
                     break;
                 case 'a-family-affair':
-                    // code block
                     img = document.getElementById('a-family-affair-tn');
                     refreshSidebar(img);
-                    projectTracker = 3;
+                    projectTracker = '3';
                     break;
                 case 'nyc-on-film':
-                    // code block
                     img = document.getElementById('nyc-on-film-tn');
                     refreshSidebar(img);
-                    projectTracker = 4;
+                    projectTracker = '4';
                     break;
                 case 'modern-orientalism':
-                    // code block
                     img = document.getElementById('modern-orientalism-tn');
                     refreshSidebar(img);
-                    projectTracker = 5;
+                    projectTracker = '5';
                     break;
                 case 'colorado':
-                    // code block
                     img = document.getElementById('colorado-tn');
                     refreshSidebar(img);
-                    projectTracker = 6;
+                    projectTracker = '6';
                     break;
                 case 'botanic-daydream':
-                    // code block
                     img = document.getElementById('botanic-daydream-tn');
                     refreshSidebar(img);
-                    projectTracker = 7;
+                    projectTracker = '7';
                     break;
                 default:
             }
@@ -421,4 +414,5 @@
                     $(caption).fadeOut('fast');
                 }
             }
+            console.log(projectTracker);
         });
